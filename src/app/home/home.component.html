@@ -1,0 +1,24 @@
+<div class="Box container mt-4">
+    <div class="displayBox">
+        <div class="iterating" *ngFor="let i of category">
+            <div class="containerBox" (click)="clickedCategory(i)" ><h5>{{i.category}}</h5></div>
+        </div>
+    </div>
+    <div *ngIf="categorySelected">
+        <div class="displayBox mt-5">
+            <div class="iterating" *ngFor="let j of categorySelected">
+                <div (click)="clickedLabel(j)" class="containerBox">{{j.label}}</div>
+            </div>
+        </div>
+        <div class="Box">
+            <form class="mt-5" [formGroup]="addRoleForm">
+                <input formControlName="role" type="text" id="addData" class="p-1" name="addRole"/>
+                <button (click)="submitRule()" class="btn btn-outline-success mb-1 mx-1"><i class="fa-solid fa-plus fa-beat"></i></button>
+            </form>
+            <div class="mt-2" *ngFor="let j of categorySelected" >
+                <div class='roleData'>{{j.role}}</div>
+                <i (click)="deleteRole(j)" class="close fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+</div>

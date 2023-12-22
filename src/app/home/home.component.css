@@ -1,0 +1,40 @@
+.containerBox{
+    width: 15rem;
+    height: 5rem;
+    background-color: lemonchiffon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerBox:active{
+    background-color: yellow;
+    cursor: pointer;
+}
+.displayBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.iterating{
+    justify-content: center;
+}
+.roleData{
+    border: 1px solid black;
+    width: 25rem;
+}
+.Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.close{
+    position: relative;
+    top:-1.5rem;
+    left: 23rem;
+}
+.close:hover{
+    transform: scale(1.1);
+}
